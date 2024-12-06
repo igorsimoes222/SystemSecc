@@ -5,3 +5,11 @@
 [dev]
   command = "npm start"          # Comando para rodar seu servidor local (mude para o comando que você usa)
   targetPort = 3000              # Porta do servidor local
+
+[build]
+  command = "npm run build"
+  publish = "public"
+
+
+[functions]
+  directory = "netlify/functions"
