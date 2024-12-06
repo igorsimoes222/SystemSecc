@@ -88,12 +88,14 @@ document.getElementById("form-item").addEventListener("submit", function (e) {
     };
 
     // Faz a requisição para o backend (exemplo com fetch)
-    fetch("http://localhost:3000/cadastrar-item", {
-        method: "POST",
+    fetch('https://endearing-kheer-72638b.netlify.app/', {
+        method: 'POST',
         headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+            item: "exemplo"
+        })
     })
         .then(response => response.json())
         .then(data => {
