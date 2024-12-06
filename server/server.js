@@ -40,3 +40,10 @@ app.post("/cadastrar-item", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+exports.handler = async (event, context) => {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Hello, World!" })
+    };
+  };

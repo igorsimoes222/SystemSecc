@@ -1,0 +1,7 @@
+[build]
+  functions = ".netlify/blobs-serve/functions"
+  publish = "public"
+
+[dev]
+  command = "npm start"          # Comando para rodar seu servidor local (mude para o comando que você usa)
+  targetPort = 3000              # Porta do servidor local
