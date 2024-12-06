@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SystemSecc</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <!-- Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de carregamento -->
+        <div id="loading" class="loading-overlay" style="display: none;">
+            <div class="spinner"></div>
+            <p>Enviando os dados...</p>
+        </div>
+
+        <!-- Relógio digital -->
+        <div id="relogio" class="relogio"></div>
+
+        <header>
+            <img src="logo.png" alt="Logo da Empresa" class="logo">
+            <h1>System Secc</h1>
+            <p>Preencha os campos abaixo para cadastrar o item e enviá-lo para o Discord.</p>
+        </header>
+
+        <form id="form-item">
+            <div class="input-group">
+                <label for="tipo-aparelho">Tipo de Aparelho:</label>
+                <select id="tipo-aparelho" name="tipo-aparelho" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Impressora">Impressora</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Teclado">Teclado</option>
+                    <option value="Mouse">Mouse</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+        
+            <div class="input-group">
+                <label for="numero-serie">Número de Série:</label>
+                <div class="input-with-icon">
+                    <input type="text" id="numero-serie" name="numero-serie" placeholder="Digite o número de série" required>
+                </div>
+            </div>
+        
+            <div class="input-group">
+                <label for="local">Origem:</label>
+                <div class="input-with-icon">
+                    <input type="text" id="local" name="local" placeholder="Digite o local" required>
+                </div>
+            </div>
+        
+            <div class="input-group">
+                <label for="destino">Destino:</label>
+                <div class="input-with-icon">
+                    <input type="text" id="destino" name="destino" placeholder="Digite o destino" required>
+                </div>
+            </div>
+        
+            <div class="input-group">
+                <label for="data-saida">Data de Saída:</label>
+                <div class="input-with-icon">
+                    <input type="date" id="data-saida" name="data-saida" required>
+                </div>
+            </div>
+        
+                         
+
+
+            <div class="input-group">
+                <label for="situacao">Situação:</label>
+                <select id="situacao" name="situacao" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Novo">Novo</option>
+                    <option value="Manutencao">Manutenção</option>
+                    
+                </select>
+            </div>
+
+
+
+
+            <div class="input-group">
+                <label for="modelo">Modelo do Item:</label>
+                <div class="input-with-icon">
+                    <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="usuario-selecionado">Usuário:</label>
+                <input type="text" id="usuario-selecionado" name="usuario-selecionado" placeholder="Usuário" readonly>
+            </div>
+        
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div id="success-message" style="display: none;">Item cadastrado com sucesso!</div>
+        
+        <footer>
+            <p>&copy; 2024 - ILS</p>
+        </footer>
+    </div>
+
+    <div class="user-selection">
+        <h2>Selecione o Usuário:</h2>
+        <div class="users">
+            <div class="user" id="user1" onclick="selectUser('User 1')">
+                <img src="image.png" alt="User 1">
+                <p>Igor</p>
+            </div>
+            <div class="user" id="user2" onclick="selectUser('User 2')">
+                <img src="image.png" alt="User 2">
+                <p>Jansen</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
